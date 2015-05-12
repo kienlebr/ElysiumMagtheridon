@@ -1,4 +1,4 @@
-﻿
+﻿@model ElysiumMagtheridon.Models.PageModel
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,13 +14,7 @@
     <div class="background"></div>
     <div class="background-overlay"></div>
 
-    <div class='navigation'>
-        <a class="nav-button text-border" href="~/">Home</a>
-        <a class="nav-button text-border">About Us</a>
-        <a class="nav-button text-border" href="~/Progression/">Progression</a>
-        <a class="nav-button text-border">Forums</a>
-        <a class="nav-button nav-button-last text-border">Apply</a>
-    </div>
+    @Html.Partial("~/Views/Partials/Navigation.cshtml")
     <div class="body-content">
         @RenderBody()
     </div>
@@ -29,5 +23,8 @@
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     @Scripts.Render("~/Content/js")
+    <div class="page-footer" id="page-footer">
+        <div class="realm-name text-border">@Model.FooterText</div>
+    </div>
 </body>
 </html>

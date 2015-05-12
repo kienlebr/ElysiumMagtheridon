@@ -9,19 +9,14 @@ namespace ElysiumMagtheridon.Controllers
 {
     public class ProgressionController : Controller
     {
-        private IProgressionItem[] Videos;
-
-        public ProgressionController(IProgressionItem[] vids)
-        {
-            this.Videos = vids;
-        }
-
         //
         // GET: /Progression/
-        public ActionResult Index(IProgressionItem[] vids)
+        public ActionResult Index()
         {
-            this.Videos = vids;
-            return View();
+            var model = new PageModel();
+            model.FooterText = "Progression";
+
+            return View(model);
         }
 	}
 }

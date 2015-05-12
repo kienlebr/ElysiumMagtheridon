@@ -5,8 +5,8 @@ using System.Web;
 
 namespace ElysiumMagtheridon.Models
 {
-    public class ProgressionVideo : IProgressionItem
+    public class PageModel
     {
-        string type;
+        public string FooterText { get; set; }
     }
 }

@@ -7,14 +7,14 @@ using System.Web.Mvc;
 
 namespace ElysiumMagtheridon.Controllers
 {
-    public class HomeController : Controller
+    public class ForumsController : Controller
     {
         //
-        // GET: /Home/
+        // GET: /Forums/
         public ActionResult Index()
         {
             var model = new PageModel();
-            model.FooterText = "MAGTHERIDON-US";
+            model.FooterText = "Forums";
 
             return View(model);
         }
